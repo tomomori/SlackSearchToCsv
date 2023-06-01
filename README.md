@@ -33,3 +33,5 @@
 * RUNボタンをクリックしても何も表示されに場合は以下を確認してください。
     * Slackの検索結果が表示されたページであるか。⇒Slackのフィルターを使用して検索結果を表示する。
     * 拡張機能のインストール直後ではないか。⇒WEBブラウザの再起動またはページのリロードが必要。
+
+[Download & Install](https://chrome.google.com/webstore/detail/slackbackupashtml/eihpmdhejmjgafpejnggbflnhmkbfbfn)
