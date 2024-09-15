@@ -10,9 +10,6 @@ const litener = function(request, sender, sendResponse) {
         
         const messGroups = document.querySelectorAll("[id^='messages_']"); // (".c-message_group"); //"#messages_*"); 
         messGroups.forEach((e) => {
-            if (btn) {
-                console.log(btn);
-            }
             e.scrollIntoView();
             if (request.ids.indexOf(e.id) < 0) {
                 newItemFound = true;

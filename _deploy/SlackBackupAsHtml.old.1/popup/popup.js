@@ -7,15 +7,12 @@ function sleep(waitMsec) {
 }
 
 function sendMessageCompleted(item) {
-    if (typeof item === "undefined") {
-        return;
-    }
-    
     if (!item.last) {
         sleep(500);
         sendMessage(item.tabId, item.ids, item.messages, true);
         return;
     }
+    //document.getElementById('result').textContent = item.messages;
     
     const jsonResult = document.getElementById('jsonResult');
     const htmlResult = document.getElementById('htmlResult');
@@ -27,15 +24,18 @@ function sendMessageCompleted(item) {
     jsonResult.innerHTML = item.messages;
     const q = jsonResult.querySelectorAll(".c-virtual_list__item"); //(".c-virtual_list__item"); //".c-search_message__content");
     q.forEach(element => {
-        const btn = e.querySelector("button.c-search__expand");
-        console.log("button=");
-        console.dir(btn);
         htmlResult.appendChild(element);
     });
     
+    //const jsonOutput = domJSON.toJSON(htmlResult, {"stringify":true}); 
+    //alert(jsonOutput);
+    //document.getElementById('result').textContent = jsonOutput;
+    
     document.getElementById('result').textContent = 
     '<html><head>'
-    + item.link
+    + '<link rel="stylesheet" href="https://a.slack-edge.com/bv1-10/slack-kit-styles.cdd05c3.min.css?cacheKey=gantry-1682980668" crossorigin="anonymous">'
+    + '<link rel="stylesheet" href="https://a.slack-edge.com/bv1-10/client-boot-styles.2cb4bd0.min.css?cacheKey=gantry-1682980668" crossorigin="anonymous">'
+    + '<link rel="stylesheet" href="https://a.slack-edge.com/bv1-10/helper-styles.b82cc1c.min.css?cacheKey=gantry-1682980668" crossorigin="anonymous">'
     + '<style>html{overflow:scroll;} .c-virtual_list__item, .c-virtual_list__sticky_container{position:revert; margin:10px; padding-right:20px;}</style>'
     + '</head><body>'
     + htmlResult.outerHTML

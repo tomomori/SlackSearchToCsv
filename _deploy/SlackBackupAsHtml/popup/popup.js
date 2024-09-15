@@ -27,9 +27,6 @@ function sendMessageCompleted(item) {
     jsonResult.innerHTML = item.messages;
     const q = jsonResult.querySelectorAll(".c-virtual_list__item"); //(".c-virtual_list__item"); //".c-search_message__content");
     q.forEach(element => {
-        const btn = e.querySelector("button.c-search__expand");
-        console.log("button=");
-        console.dir(btn);
         htmlResult.appendChild(element);
     });
     

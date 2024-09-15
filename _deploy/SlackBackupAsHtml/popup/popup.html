@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>SlackBackupAsHtml</title>
+        <script src="popup.js"></script>
+    </head>
+    <body style="width:480; height:320;">
+        <div style="font-size:x-large;">SlackBackupAsHtml</div>
+        <div style="margin-top:10px; font-size:large;">Result</div>
+        <form>
+        <textarea id="result" name="result" col=50 row=100 style="width: 98%; height: 50%; font-size:large;" value=""></textarea>
+        <div style="margin-top:50px; text-align:center;">
+            <input type="button" id="btnRun" name="btnRun" style="font-size:x-large;" value="Run"/>
+            <input type="button" id="btnSave" name="btnSave" style="font-size:x-large;" disabled=disabled; value="Save"/>
+            <input type="button" id="btnClose" name="btnClose" style="font-size:x-large;" value="Close"/>
+        </div>
+        <div id="htmlResult"></div>
+        <div id="jsonResult" style="display:none;"></div>
+        </form>
+    </body>
+</html>
